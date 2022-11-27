@@ -1,46 +1,62 @@
 .clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.clients__item {
+  width: 210px;
+  height: 92px;
+  margin: 15px;
+}
+
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -15px;
+}
+
+.clients__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $iconFill;
+  border-radius: 4px;
+  transition: 250ms border $transition;
+  &:hover,
+  &:focus {
+    border: 1px solid $accentColor;
+  }
+}
+
+.clients__icon {
+  fill: $iconFill;
+  transition: fill 250ms $transition;
+
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: $accentColor;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
     padding-top: 94px;
     padding-bottom: 94px;
   }
-  
+
   .clients__list {
-    display: flex;
+    flex-wrap: nowrap;
   }
-  
   .clients__item {
     width: 170px;
-    height: 92px;
-
-    &:not(:last-child) {
-        margin-right: 30px;
-      }
   }
-  
-  .clients__link {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid $iconFill;
-    border-radius: 4px;
-    transition: border 250ms $transition;
-
-    &:hover,
-    &:focus {
-    border: 1px solid $accentColor;
-  }
-  }
-  
-   .clients__icon {
-    fill: $iconFill;
-    transition: fill 250ms $transition;
-
-    .clients__link:hover &,
-    .clients__link:focus & {
-    fill: $accentColor;
-  }
-  }
-  
-  
-  
+}
