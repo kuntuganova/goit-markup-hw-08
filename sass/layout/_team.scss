@@ -77,7 +77,7 @@
   }
   
   .team-social__icon {
-    fill: var(--icon-fill);
+    fill: $iconFill;
     transition: fill 250ms $transition;
 
     .team-social__link:hover &,

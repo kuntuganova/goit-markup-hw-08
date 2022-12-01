@@ -65,7 +65,7 @@
     fill: #000000;
     transition: fill 250ms $transition;
     &:hover,
-    &focus {
+    &:focus {
       fill: $accentColor;
     }
   }
@@ -94,6 +94,10 @@
   
   .mobile-menu__contacts {
     margin-bottom: 64px;
+  }
+
+  .mobile-menu__contacts-item {
+    margin-top: 32px;
   }
   
   .mobile-menu__contacts-link {
